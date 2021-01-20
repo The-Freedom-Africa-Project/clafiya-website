@@ -17,7 +17,7 @@
 }
 
 .mission-vision {
-    height: 300px;
+    min-height: 300px;
     border: 1px solid #B3D4FF;
     border-radius: 20px;
     width: 70vw;
@@ -46,6 +46,19 @@
     height: 200px;
     width: 2px;
     opacity: .5;
+}
+
+@media only screen and (max-width: 425px) {
+    .mission-vision {
+        padding: 20px 0px;
+        width: 90vw;
+    }
+    .about-divider {
+        height: 1px;
+        width: 80%;
+        border-top: 1px solid #4C9AFF;
+        border-left: none;
+    }
 }
 
 /* .mission {
