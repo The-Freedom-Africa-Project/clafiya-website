@@ -17,7 +17,11 @@
 }
 
 .mission-vision {
+<<<<<<< HEAD
     min-height: 300px;
+=======
+    height: 300px;
+>>>>>>> 4462a7e4bff367d91a77b4d478b561b3de920668
     border: 1px solid #B3D4FF;
     border-radius: 20px;
     width: 70vw;
