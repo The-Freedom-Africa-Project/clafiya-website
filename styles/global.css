@@ -12,7 +12,7 @@
 @import "style.css"; 
 
 .getting-started#get_started {
-    margin: 40px 0px;
+    margin: 80px 0px 40px 0px;
 }
 
 .packages-table thead tr div{
@@ -72,6 +72,13 @@
     height: 200px;
     width: 2px;
     opacity: .5;
+}
+
+footer .social-icons-facebook, 
+footer .social-icons-twitter, 
+footer .social-icons-instagram, 
+footer .social-icons-linkedin {
+    margin: 10px 10px 0px 0px;
 }
 
 @media only screen and (max-width: 425px) {

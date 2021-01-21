@@ -165,9 +165,12 @@ class Home extends Component {
                                 <section>
                                     <div className="rectangle mb-0 d-inline-block"></div>
                                     <h2 className="my-2 text-capitalize font-weight-semibold">
-                                        This is What Makes Clafiya Different From All Others.
+                                        What Makes Clafiya Different?
                                     </h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor turpis bibendum condimentum viverra. Iaculis diam lorem tellus sem eget etiam sed proin. Lobortis in posuere nascetur vivamus. Elementum porttitor enim ullamcorper lacinia.</p>
+                                    <p>
+                                        Our desire to ensure that access to primary health care is a basic right for all Africans regardless of socio-economic status is what makes Clafiya different. <br/>  
+                                        Clafiya was founded with the mission to provide life-saving health care services to individuals living in semi-urban and rural communities. This women-led platform is determined to connect people to the nearest health care worker, no matter where they live and what their income may be - our goal is that quality and affordable health services are within reach to everyone, everywhere. Through Clafiya, we are one step closer to meeting the SDGs 1, 3, and 8. 
+                                    </p>
                                 </section>
                             </div>
                             <div className="col-md-6 what-scroll">
