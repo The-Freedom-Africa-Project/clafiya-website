@@ -387,7 +387,7 @@ class Home extends Component {
                             <div className="rectangle d-inline-block mb-4"></div>
                         </div>
                         {/* Mobile Packages View */}
-                        <div className='d-block d-sm-block mobile-packages'>
+                        <div className='d-block d-sm-none mobile-packages'>
                             {/* Basic Plan */}
                             <div className='plan'>
                                 <p className='plan-name'>
@@ -396,7 +396,7 @@ class Home extends Component {
                                 <p className='plan-price'>
                                     <sup>₦</sup>2,000
                                 </p>
-                                <small>Pay as you go</small>
+                                <small>Pay as you go - charges for extra services</small>
                                 <div className='plan-button'><a className="btn button px-4 py-2 text-white" data-toggle="modal" data-target="#paymentModal" onClick={() => this.setAmount(200000)}>Get Started</a></div>
                                 <div className='plan-services'>
                                     <div className='plan-service row'>
