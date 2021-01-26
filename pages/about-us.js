@@ -33,7 +33,7 @@ class Home extends Component {
         // loadJs("vendor/vide/jquery.vide.min.js");
         // loadJs("vendor/vivus/vivus.min.js");
         // loadJs("js/theme.js");
-        loadJs("js/theme.init.js");
+        // loadJs("js/theme.init.js");
 
 	
     }
@@ -60,7 +60,7 @@ class Home extends Component {
                 <script src="vendor/vide/jquery.vide.min.js"></script>		
                 <script src="vendor/vivus/vivus.min.js"></script>
                 <script src="js/theme.js"></script>
-                {/* <script src="js/theme.init.js"></script> */}
+                <script src="js/theme.init.js"></script>
             </Head>
                 <section className="about-header page-header page-header-modern page-header-background page-header-background-md overlay overlay-color-dark overlay-show overlay-op-7">
                     <div className="container">
@@ -87,7 +87,7 @@ class Home extends Component {
                         <div className="row text-center pb-5">
                             <div className="col-md-10 mx-md-auto">
                                 <div className="overflow-hidden mb-3">
-                                    <h1 className="word-rotator slide font-weight-bold text-8 mb-0 appeear-animation" data-appear-animation="maskUp">
+                                    <h1 className="word-rotator slide font-weight-bold text-8 mb-0 appeear-animation">
                                         <span>We are Clafiya, We </span>
                                         <span className="word-rotator-words bg-primary">
                                             <b className="is-visible">Provide</b>
@@ -98,8 +98,8 @@ class Home extends Component {
                                     </h1>
                                 </div>
                                 <div className="overflow-hidden mb-3">
-                                    <p className="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
-                                    We at Clafifa believe that access to affordable and quality primary health care should be a basic right for all Africans.
+                                    <p className="lead mb-0 appeear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">
+                                    We at Clafiya believe that access to affordable and quality primary health care should be a basic right for all Africans.
                                     </p>
                                 </div>
                             </div>
@@ -132,14 +132,14 @@ class Home extends Component {
                                 <div className="col-sm-6 col-lg-3 mb-5 mb-lg-0">
                                     <div className="counter">
                                         <i className="icons icon-user text-color-light"></i>
-                                        <strong className="text-color-light font-weight-extra-bold" data-to="50" data-append="+">50</strong>
+                                        <strong className="text-color-light font-weight-extra-bold" data-to="256">256</strong>
                                         <label className="text-4 mt-1 text-color-light">Patients</label>
                                     </div>
                                 </div>
                                 <div className="col-sm-6 col-lg-3 mb-5 mb-lg-0">
                                     <div className="counter">
                                         <i className="icons icon-badge text-color-light"></i>
-                                        <strong className="text-color-light font-weight-extra-bold" data-to="256">256</strong>
+                                        <strong className="text-color-light font-weight-extra-bold" data-to="50" data-append="+">50</strong>
                                         <label className="text-4 mt-1 text-color-light">Health Workers</label>
                                     </div>
                                 </div>
