@@ -347,6 +347,10 @@ body, html {
     background-repeat: no-repeat !important;
   }
 
+  .testimonial-section .owl-carousel.nav-style-1 .owl-nav .owl-next, .testimonial-section .owl-carousel.nav-style-1 .owl-nav .owl-prev {
+    color: #ffffff !important
+  }
+
   .testimonial {
     margin: 40px 20px;
     height: max-content;
