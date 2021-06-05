@@ -17,6 +17,60 @@ p, h1, h2, h3, h4, h5, h6 {
     color: #172B4D !important;
 }
 
+.jumbotron.banner {
+    background-color: #0052CC;
+    min-height: 70px;
+    height: fit-content;
+    color: #FFFFFF;
+    padding: 0 10px;
+    margin-bottom: 0;
+    background-image: url('../public/img/indexImg/balloon-1.svg');
+    background-position: 10px 100%;
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 !important;
+    background-image: url('../public/img/indexImg/balloon-2.svg');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    /* margin: 10px 0px; */
+}
+
+.banner.mobile .banner-button {
+    margin: 10px 5%;
+    width: 90%;
+}   
+
+.banner-content .banner-text {
+    color: #FFFFFF !important;
+    margin: 10px 20px 10px 0px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.banner-content .banner-button {
+    height: 50px;
+    border: 3px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.banner-content .banner-button a {
+    color: #FFFFFF !important;
+    font-weight: 700;
+}
+
 .lead {
     font-size: 1.5rem;
     line-height: 2rem;

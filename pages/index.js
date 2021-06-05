@@ -173,6 +173,44 @@ class Home extends Component {
                     {/* <script src="js/theme.init.js"></script> */}
                     {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link> */}
                 </Head>
+                {/* banner section */}
+                <div className='jumbotron banner mobile d-block d-md-none'>
+                    <div className='banner-content'>
+                        <div className='row'>
+                            <div className='col-12'>
+                                <div className='row'>
+                                    <div className='col-12'>
+                                        <p className='banner-text me-2'>
+                                            We are LIVE in Enugu South LGA. You can now register and schedule your appointments.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className='row'>
+                                    <div className='col-12'>
+                                    {/* <div><a className="banner-button ms-2" href="#about_clafiya">Learn more</a></div> */}
+                                        <button className='banner-button ms-2'>
+                                            <a href="#about_clafiya">
+                                                Learn more
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='jumbotron banner d-none d-md-flex'>
+                    <div className='banner-content'>    
+                        <p className='banner-text me-2'>
+                            We are LIVE in Enugu South LGA. You can now register and schedule your appointments.
+                        </p>
+                        <div><a className="banner-button ms-2" href="#about_clafiya">Learn more</a></div>
+                        {/* <button className='banner-button ms-2'>
+                            Learn more
+                        </button> */}
+                    </div>
+                </div>
+                {/* banner section end */}
                 {/* hero section */}
                 <div className="hero mb-5">
                     <div className="container hero-content">
