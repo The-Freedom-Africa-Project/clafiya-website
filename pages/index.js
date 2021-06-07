@@ -181,8 +181,7 @@ class Home extends Component {
                                 <div className='row'>
                                     <div className='col-12'>
                                         <p className='banner-text me-2'>
-                                            We are LIVE in Enugu South LGA. You can now register and schedule your appointments.
-                                            {/* We are LIVE in Enugu Urban Area */}
+                                            We are LIVE in Enugu Urban Area. You can now register and schedule your appointments.
                                         </p>
                                     </div>
                                 </div>
@@ -203,8 +202,7 @@ class Home extends Component {
                 <div className='jumbotron banner d-none d-md-flex'>
                     <div className='banner-content'>    
                         <p className='banner-text me-2'>
-                            We are LIVE in Enugu South LGA. You can now register and schedule your appointments.
-                            {/* We are LIVE in Enugu Urban Area */}
+                            We are LIVE in Enugu Urban Area. You can now register and schedule your appointments.
                         </p>
                         <div><a className="banner-button ms-2" href="#about_clafiya">Learn more</a></div>
                         {/* <button className='banner-button ms-2'>
