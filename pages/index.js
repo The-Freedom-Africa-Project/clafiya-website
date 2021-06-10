@@ -953,7 +953,7 @@ class Home extends Component {
                                 </p>
                                 <p className="hr-rule"></p>
                                 <p className="text-white">
-                                    Already a health worker with us? Click the SIgn In button to access your dashboard.
+                                    Already a health worker with us? Click the Sign In button to access your dashboard.
                                 </p>
                             </div>
                             <div className="col-md-4 d-flex justify-content-center ">
