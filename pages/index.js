@@ -951,6 +951,10 @@ class Home extends Component {
                                 <p className="text-white">
                                     We would love to hear from you. Click on the button to register.
                                 </p>
+                                <p className="hr-rule"></p>
+                                <p className="text-white">
+                                    Already a health worker with us? Click the SIgn In button to access your dashboard.
+                                </p>
                             </div>
                             <div className="col-md-4 d-flex justify-content-center ">
                                 {/* <a href="https://localhealer.typeform.com/to/AWUPye" target="_black" className="text-white sign-up d-flex justify-content-center align-items-center">
@@ -959,6 +963,10 @@ class Home extends Component {
                                 </a> */}
                                 <a href="https://forms.gle/qBmnqJm6MfSjCcZH6" target="_black" className="text-white sign-up d-flex justify-content-center align-items-center">
                                     Register
+                                    {/* <i className="fa fa-arrow-right px-2"></i> */}
+                                </a>
+                                <a href="https:app.clafiya.com"  className="ml-3 sign-in d-flex justify-content-center align-items-center">
+                                    Sign In
                                     {/* <i className="fa fa-arrow-right px-2"></i> */}
                                 </a>
                             </div>
