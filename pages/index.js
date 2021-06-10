@@ -965,7 +965,7 @@ class Home extends Component {
                                     Register
                                     {/* <i className="fa fa-arrow-right px-2"></i> */}
                                 </a>
-                                <a href="https:app.clafiya.com"  className="ml-3 sign-in d-flex justify-content-center align-items-center">
+                                <a href="https://app.clafiya.com"  className="ml-3 sign-in d-flex justify-content-center align-items-center">
                                     Sign In
                                     {/* <i className="fa fa-arrow-right px-2"></i> */}
                                 </a>
