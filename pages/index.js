@@ -5,6 +5,7 @@ import PartialLayout from '../layout/partials-layout';
 import MaskInput from 'react-maskinput';
 import PaystackButton from 'react-paystack';
 import Link from 'next/link';
+import Loader from "react-loader-spinner";
 // import 'bootstrap/dist/js/bootstrap.js';
 var loadJs = require('loadjs');
 // var window;
@@ -30,7 +31,8 @@ class Home extends Component {
         name: '',
         user_email: '',
         phone: '',
-        plan: ''
+        plan: '',
+        chwSigninLoading: false
     }
 
     isRegisterFormValid = false;
@@ -966,7 +968,18 @@ class Home extends Component {
                                     {/* <i className="fa fa-arrow-right px-2"></i> */}
                                 </a>
                                 <a href="https://app.clafiya.com"  className="ml-3 sign-in d-flex justify-content-center align-items-center">
-                                    Sign In
+                                    {/* Sign In */}
+                                    {
+                                        this.state.chwSigninLoading ? 
+                                        <Loader
+                                            type="TailSpin"
+                                            color="#000000"
+                                            height={30}
+                                            width={30}
+                                            // timeout={3000} //3 secs
+                                        /> :
+                                        'Sign In'
+                                    }
                                     {/* <i className="fa fa-arrow-right px-2"></i> */}
                                 </a>
                             </div>
