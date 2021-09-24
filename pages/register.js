@@ -24,8 +24,8 @@ class Register extends Component {
         // key: "pk_live_477f8475b863b328656efdad927cd98e47e740fd",
         // email: "shodipovi@gmail.com",
         // amount: 100000
-        api: 'https://testapi.clafiya.com/api/tfap',
-        // api: 'http://localhost:8000/api/tfap',
+        // api: 'https://testapi.clafiya.com/api/tfap',
+        api: 'http://localhost:8000/api/tfap',
         currentStep: 1,
         // Form One
         firstname: '',
@@ -145,53 +145,55 @@ class Register extends Component {
         const response = await fetch(`${this.state.api}/clients/create`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify(data)
-        });
+        })
+        // .then((res) => {
+        //     console.log(res)
+        // }).catch((err)=> {
+
+        // });
 
         const res = await response.json();
         console.log(res);
-        if (res.status === "error") {
-            this.error_msg = res.msg;
-            Swal.fire({
-                title: "Error!",
-                text: res.msg,
-                type: "error",
-                confirmButtonText: "ok",
-            });
-            this.state.registerLoading = false;
-        } else if (res.status === 'ok') {
-            // Swal.fire({
-            //     title: "Successful!",
-            //     text: 'Account Created Sucessfully',
-            //     type: "success",
-            //     confirmButtonText: "Thank You!",
-            // });
-            this.state.registerLoading = false;
-            // CALL PAYSTACK GENERATE PAYMENT LINK
-            let client_id = res.data.id;
-            let subscription_type_id = sub_id;
-            let callback_url = (window.location.hostname === 'localhost') ? 'localhost:3000/successful-registration' : 'https://clafiya.com/successful-registration';
-            this.generatePaymentLink(client_id, subscription_type_id, callback_url);
-            this.resetForm();
-        }
-        // FOR PARTICULAR ERROR MESSAGES
+        // if (res.status === "error") {
+        //     this.error_msg = res.msg;
+        //     Swal.fire({
+        //         title: "Error!",
+        //         text: res.msg,
+        //         type: "error",
+        //         confirmButtonText: "ok",
+        //     });
+        //     this.state.registerLoading = false;
+        // } else if (res.status === 'ok') {
+            
+        //     this.state.registerLoading = false;
+        //     // CALL PAYSTACK GENERATE PAYMENT LINK
+        //     let client_id = res.data.id;
+        //     let subscription_type_id = sub_id;
+        //     let callback_url = (window.location.hostname === 'localhost') ? 'localhost:3000/successful-registration' : 'https://clafiya.com/successful-registration';
+        //     this.generatePaymentLink(client_id, subscription_type_id, callback_url);
+        //     this.resetForm();
+        // }
+        // // FOR PARTICULAR ERROR MESSAGES
         if (!res.status) {
-            if (res.phone_number) {
+            if (res.errors.phone_number) {
                 Swal.fire({
                     title: 'Error!',
-                    text: res.phone_number[0]
+                    text: res.errors.phone_number
                 });
                 this.state.registerLoading = false;
             }
-            if (res.email) {
+            if (res.errors.email) {
                 Swal.fire({
                     title: 'Error!',
-                    text: res.email[0]
+                    text: res.errors.email[0]
                 });
                 this.state.registerLoading = false;
             }
+            this.state.registerLoading = false;
         }
     }
 
