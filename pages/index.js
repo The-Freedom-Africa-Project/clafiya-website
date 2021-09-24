@@ -5,6 +5,7 @@ import PartialLayout from '../layout/partials-layout';
 import MaskInput from 'react-maskinput';
 import PaystackButton from 'react-paystack';
 import Link from 'next/link';
+import Loader from "react-loader-spinner";
 // import 'bootstrap/dist/js/bootstrap.js';
 var loadJs = require('loadjs');
 // var window;
@@ -30,7 +31,8 @@ class Home extends Component {
         name: '',
         user_email: '',
         phone: '',
-        plan: ''
+        plan: '',
+        chwSigninLoading: false
     }
 
     isRegisterFormValid = false;
@@ -173,6 +175,44 @@ class Home extends Component {
                     {/* <script src="js/theme.init.js"></script> */}
                     {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link> */}
                 </Head>
+                {/* banner section */}
+                <div className='jumbotron banner mobile d-block d-md-none'>
+                    <div className='banner-content'>
+                        <div className='row'>
+                            <div className='col-12'>
+                                <div className='row'>
+                                    <div className='col-12'>
+                                        <p className='banner-text me-2'>
+                                            We are LIVE in Enugu Urban Area. You can now register and schedule your appointments.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className='row'>
+                                    <div className='col-12'>
+                                    {/* <div><a className="banner-button ms-2" href="#about_clafiya">Learn more</a></div> */}
+                                        <button className='banner-button ms-2'>
+                                            <a href="#about_clafiya">
+                                                Learn more
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='jumbotron banner d-none d-md-flex'>
+                    <div className='banner-content'>    
+                        <p className='banner-text me-2'>
+                            We are LIVE in Enugu Urban Area. You can now register and schedule your appointments.
+                        </p>
+                        <div><a className="banner-button ms-2" href="#about_clafiya">Learn more</a></div>
+                        {/* <button className='banner-button ms-2'>
+                            Learn more
+                        </button> */}
+                    </div>
+                </div>
+                {/* banner section end */}
                 {/* hero section */}
                 <div className="hero mb-5">
                     <div className="container hero-content">
@@ -493,49 +533,49 @@ class Home extends Component {
                                 <div className='plan-button'><a className="btn button px-4 py-2 text-white" data-toggle="modal" data-target="#basicPlanModal">Get Started</a></div>
                                 <div className='plan-services'>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Primary Care Consultation
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Hypertension Screening
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Blood Sugar Screening
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-x.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Rapid Diagnostic Test for: Malaria, Typhoid
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-x.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Pregnancy Test
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-x.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Prenatal | Antenatal |  Postnatal Care Services
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-x.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Protein and Urine Screening
                                         </p>
@@ -555,49 +595,49 @@ class Home extends Component {
                                 <div className='plan-button'><a className="btn button px-4 py-2 text-white" data-toggle="modal" data-target="#singlePlanModal">Get Started</a></div>
                                 <div className='plan-services'>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Primary Care Consultation
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Hypertension Screening
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Blood Sugar Screening
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Rapid Diagnostic Test for: Malaria, Typhoid
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Pregnancy Test
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Prenatal | Antenatal |  Postnatal Care Services
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-x.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Protein and Urine Screening
                                         </p>
@@ -617,49 +657,49 @@ class Home extends Component {
                                 <div className='plan-button'><a className="btn button px-4 py-2 text-white" data-toggle="modal" data-target="#maternityPlanModal">Get Started</a></div>
                                 <div className='plan-services'>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Primary Care Consultation
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Hypertension Screening
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Blood Sugar Screening
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Rapid Diagnostic Test for: Malaria, Typhoid
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Pregnancy Test
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Prenatal | Antenatal |  Postnatal Care Services
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Protein and Urine Screening
                                         </p>
@@ -679,49 +719,49 @@ class Home extends Component {
                                 <div className='plan-button'><a className="btn button px-4 py-2 text-white" data-toggle="modal" data-target="#familyPlanModal">Get Started</a></div>
                                 <div className='plan-services'>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Primary Care Consultation
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Hypertension Screening
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Blood Sugar Screening
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Rapid Diagnostic Test for: Malaria, Typhoid
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Pregnancy Test
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Prenatal | Antenatal |  Postnatal Care Services
                                         </p>
                                         <img className='justify-content-end' height='40px' width='40px' src='./img/icons/icon-check.svg'></img>
                                     </div>
                                     <div className='plan-service row'>
-                                        <hr></hr>
+                                        {/* <hr></hr> */}
                                         <p className='justify-content-start service-name col-xs-12'>
                                             Protein and Urine Screening
                                         </p>
@@ -913,6 +953,10 @@ class Home extends Component {
                                 <p className="text-white">
                                     We would love to hear from you. Click on the button to register.
                                 </p>
+                                <p className="hr-rule"></p>
+                                <p className="text-white">
+                                    Already a health worker with us? Click the Sign In button to access your dashboard.
+                                </p>
                             </div>
                             <div className="col-md-4 d-flex justify-content-center ">
                                 {/* <a href="https://localhealer.typeform.com/to/AWUPye" target="_black" className="text-white sign-up d-flex justify-content-center align-items-center">
@@ -921,6 +965,21 @@ class Home extends Component {
                                 </a> */}
                                 <a href="https://forms.gle/qBmnqJm6MfSjCcZH6" target="_black" className="text-white sign-up d-flex justify-content-center align-items-center">
                                     Register
+                                    {/* <i className="fa fa-arrow-right px-2"></i> */}
+                                </a>
+                                <a href="https://app.clafiya.com"  className="ml-3 sign-in d-flex justify-content-center align-items-center">
+                                    {/* Sign In */}
+                                    {
+                                        this.state.chwSigninLoading ? 
+                                        <Loader
+                                            type="TailSpin"
+                                            color="#000000"
+                                            height={30}
+                                            width={30}
+                                            // timeout={3000} //3 secs
+                                        /> :
+                                        'Sign In'
+                                    }
                                     {/* <i className="fa fa-arrow-right px-2"></i> */}
                                 </a>
                             </div>

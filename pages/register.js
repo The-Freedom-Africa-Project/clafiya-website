@@ -45,7 +45,9 @@ class Register extends Component {
         subscriptions: '',
         registerLoading: false,
         paystack_email: 'dev@clafiya.com',
-        paystack_key: 'pk_live_477f8475b863b328656efdad927cd98e47e740fd'
+        paystack_key: 'pk_live_477f8475b863b328656efdad927cd98e47e740fd',
+        toLoginLoader: false,
+        nextStepLoader: false,
     }
 
     states = [];
@@ -88,6 +90,10 @@ class Register extends Component {
 
     nextStep = (event) => {
         event.preventDefault();
+        this.state.nextStepLoader = true;
+        setTimeout(() => {
+            this.state.nextStepLoader = false;
+        }, 1200);
         if (this.state.currentStep === 1) {
             this.setState({
                 ...this.state,
@@ -147,7 +153,7 @@ class Register extends Component {
         const res = await response.json();
         console.log(res);
         if (res.status === "error") {
-            this.error_msg = res.data.msg;
+            this.error_msg = res.msg;
             Swal.fire({
                 title: "Error!",
                 text: res.msg,
@@ -493,7 +499,19 @@ class Register extends Component {
 
                             <div id='left-bottom'>
                                 <p>Already a member?</p>
-                                <button type='button' className='btn btn-white'>Log into your account</button>
+                                <button type='button' className='btn btn-white'>
+                                    {
+                                        this.state.toLoginLoader ? 
+                                        <Loader
+                                            type="TailSpin"
+                                            color="#F4F5F7"
+                                            height={30}
+                                            width={30}
+                                            // timeout={3000} //3 secs
+                                        /> :
+                                        'Log into your account'
+                                    }
+                                </button>
                             </div>
                         </div>
                         <div className='col-12 col-md-6 col-lg-5' id='right'>
@@ -549,7 +567,19 @@ class Register extends Component {
                                         {/* <button type='submit' className='btn button'>Continue</button> */}
                                     </div>
                                     <div className='col-6 col'>
-                                        <button type='submit' className='btn button'>Continue</button>
+                                        <button type='submit' className='btn button'>
+                                            {
+                                                this.state.nextStepLoader ? 
+                                                <Loader
+                                                    type="TailSpin"
+                                                    color="#F4F5F7"
+                                                    height={30}
+                                                    width={30}
+                                                    timeout={1200} //1.2 secs
+                                                /> :
+                                                'Continue'
+                                            }
+                                        </button>
                                     </div>
                                 </div>
                             </form> : ''}
@@ -636,7 +666,19 @@ class Register extends Component {
                                         <button type='button' className='btn outline-primary button' onClick={this.prevStep}>Go Back</button>
                                     </div>
                                     <div className='col-6 col'>
-                                        <button type='submit' className='btn button'>Continue</button>
+                                        <button type='submit' className='btn button' disabled={this.state.nextStepLoader}>
+                                            {
+                                                this.state.nextStepLoader ? 
+                                                <Loader
+                                                    type="TailSpin"
+                                                    color="#F4F5F7"
+                                                    height={30}
+                                                    width={30}
+                                                    timeout={1200} //1.2 secs
+                                                /> :
+                                                'Continue'
+                                            }
+                                        </button>
                                     </div>
                                 </div>
                             </form> : ''}
