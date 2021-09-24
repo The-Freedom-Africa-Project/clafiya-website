@@ -158,25 +158,25 @@ class Register extends Component {
 
         const res = await response.json();
         console.log(res);
-        // if (res.status === "error") {
-        //     this.error_msg = res.msg;
-        //     Swal.fire({
-        //         title: "Error!",
-        //         text: res.msg,
-        //         type: "error",
-        //         confirmButtonText: "ok",
-        //     });
-        //     this.state.registerLoading = false;
-        // } else if (res.status === 'ok') {
+        if (res.status === "error") {
+            this.error_msg = res.msg;
+            Swal.fire({
+                title: "Error!",
+                text: res.msg,
+                type: "error",
+                confirmButtonText: "ok",
+            });
+            this.state.registerLoading = false;
+        } else if (res.status === 'ok') {
             
-        //     this.state.registerLoading = false;
-        //     // CALL PAYSTACK GENERATE PAYMENT LINK
-        //     let client_id = res.data.id;
-        //     let subscription_type_id = sub_id;
-        //     let callback_url = (window.location.hostname === 'localhost') ? 'localhost:3000/successful-registration' : 'https://clafiya.com/successful-registration';
-        //     this.generatePaymentLink(client_id, subscription_type_id, callback_url);
-        //     this.resetForm();
-        // }
+            this.state.registerLoading = false;
+            // CALL PAYSTACK GENERATE PAYMENT LINK
+            let client_id = res.data.id;
+            let subscription_type_id = sub_id;
+            let callback_url = (window.location.hostname === 'localhost') ? 'localhost:3000/successful-registration' : 'https://clafiya.com/successful-registration';
+            this.generatePaymentLink(client_id, subscription_type_id, callback_url);
+            this.resetForm();
+        }
         // // FOR PARTICULAR ERROR MESSAGES
         if (!res.status) {
             if (res.errors.phone_number) {
