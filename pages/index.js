@@ -6,6 +6,8 @@ import MaskInput from 'react-maskinput';
 import PaystackButton from 'react-paystack';
 import Link from 'next/link';
 import Loader from "react-loader-spinner";
+import Lottie from 'react-lottie-player';
+import comingToTheWorld from '../public/lottie/coming-to-the-world.json';
 // import 'bootstrap/dist/js/bootstrap.js';
 var loadJs = require('loadjs');
 // var window;
@@ -227,6 +229,31 @@ class Home extends Component {
                             <div className="hero-img col-md-6 col-sm-push-6 pt-5 mt-3">
                                 <img src="img/indexImg/hero IMG.svg" />
                             </div>
+                        </div>
+                    </div>
+                </div>
+                {/* waitlist section */}
+                <div className='py-5' id='waitlist'>
+                    <div className='container'>
+                        <div className='row justify-content-center align-items-center'>
+                            <div className='col-12 col-md-6'>
+                                <Lottie
+                                    loop
+                                    animationData={comingToTheWorld}
+                                    play
+                                    style={{ width: 376, height: 560 }}
+                                />
+                            </div>    
+                            <div className='col-12 col-md-4 text-left'>
+                                <h3 className="font-weight-extrabold my-2">
+                                    Clafiya is coming to Lagos 
+                                </h3>
+                                <p className='py-2'>
+                                    Get easy access to affordable, quality healthcare right at your doorstep. Join our waitlist to get a free health checkup when we’re up and running!
+                                </p>
+                                <button className="btn button px-4 text-white">Join Waitlist</button>
+                            </div>    
+                            <div className='col-12 col-md-2'></div>
                         </div>
                     </div>
                 </div>
