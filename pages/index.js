@@ -253,6 +253,7 @@ class Home extends Component {
                                 </p>
                                 <button className="btn button px-4 text-white">Join Waitlist</button>
                             </div>    
+                            
                             <div className='col-12 col-md-2'></div>
                         </div>
                     </div>
